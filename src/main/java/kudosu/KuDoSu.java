@@ -19,12 +19,14 @@ public class KuDoSu {
 				{0,9,0,0,0,0,4,0,0}};
 		
 		
-		GUI.showw();
-		//GUI.showNumberBoard(board);
+		GUI.showInitial(board);
+		
+		long s = System.nanoTime();
 		solveSudoku(board);
+		System.out.println("time taken (ms) "+(System.nanoTime()-s)/1000000);
 		Util.printBoard(board);
 		
-		System.out.println("chk sol: "+isValid(board,8,7,8)); //false 
+		//System.out.println("chk sol: "+isValid(board,8,7,8)); //false 
 		System.out.println("deapth "+deapth);
 		
 		System.out.println("End");
@@ -32,21 +34,20 @@ public class KuDoSu {
 	
 	private static boolean solveSudoku(int[][] board) {
 		deapth++;
-		//GUI.showNumberBoard(board);
-		System.out.println("deapth " + deapth);
+		//System.out.println("deapth " + deapth);
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
 				if (board[i][j] == 0) {
 					for (int k = 1; k <= 9; k++) {
 						board[i][j] = k;
-						// GUI.updateNumber(i, j, k);
-						// GUI.showNumberBoard(board);
+						 GUI.updateNumber(i, j, k);
+						//GUI.showNumberBoard(board);
 						if (isValid(board, i, j, k) && solveSudoku(board)) {
 							return true;
 						}
 						board[i][j] = 0;
-						// GUI.updateNumber(i, j, 0);
-						// GUI.showNumberBoard(board);
+						GUI.updateNumber(i, j, 0);
+						//GUI.showNumberBoard(board);
 					}
 					return false;
 				}
