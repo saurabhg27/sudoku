@@ -1,7 +1,7 @@
-# sudoku
+# Sudoku
 Sudoku puzzle solver in java
 
-**Animation**  
+### Extremely Cool Animation ( ͡° ͜ʖ ͡°)
 
 
 ![Animation](https://github.com/saurabhg27/sudoku/raw/master/sudoku_anim.gif)
