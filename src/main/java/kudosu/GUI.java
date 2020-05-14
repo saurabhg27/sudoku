@@ -55,13 +55,13 @@ public class GUI extends JFrame {
     	JTextField txtF = instance.f[row][col];
     	txtF.setText(String.valueOf(num));
     	txtF.setForeground(Color.BLUE);
-    	//Util.silentSleep(1);
+    	Util.silentSleep(5);
     	txtF.setForeground(Color.BLACK);
     }
     
     private GUI(){
         super("KuDoSu Board");
-        int numm=1;
+        
         for(int x=0; x<=8; x++){
             for(int y=0; y<=8; y++){
                 f[x][y]=new JTextField(1);
