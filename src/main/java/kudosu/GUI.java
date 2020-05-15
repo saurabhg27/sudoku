@@ -83,7 +83,7 @@ public class GUI extends JFrame {
             for(int i=0; i<=2; i++){    
                 for(int x=0; x<=2; x++ ){
                     for(int y=0; y<=2; y++){
-                    	System.out.println(" uixy "+u+" "+i+" "+x+" "+y);
+                    	//System.out.println(" uixy "+u+" "+i+" "+x+" "+y);
                         p[i][u].add(f[x+i*3][y+u*3]);
                     }
                 }
