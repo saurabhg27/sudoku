@@ -1,6 +1,16 @@
 # Sudoku
 Sudoku puzzle solver in java
 
+To Run
+```
+java -jar target/sudoku-sg-0.0.1.jar
+```
+
+To build
+```shell
+./mvnw clean package
+```
+
 ### Extremely Cool Animation ( ͡° ͜ʖ ͡°)
 
 
